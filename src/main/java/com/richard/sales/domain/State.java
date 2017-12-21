@@ -10,10 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
+@EqualsAndHashCode(of ={"id"})
+@Data
 @Entity
 public class State implements Serializable {
 

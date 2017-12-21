@@ -5,21 +5,21 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum TypeClient {
+public enum ClientType {
 	
 	PHYSICAL_PERSON(1, "Pessoa Física"),
 	LEGAL_PERSON(2, "Pessoa Jurídica");
 	
-	private int cod;
+	private int code;
 	private String description;
 	
-	public static TypeClient toEnum(Integer id) {
+	public static ClientType toEnum(Integer id) {
 		if (id == null) { 
 			return null;
 		}
 		
-		for (TypeClient x : TypeClient.values()) { 
-			if (id.equals(x.getCod())) {
+		for (ClientType x : ClientType.values()) { 
+			if (id.equals(x.getCode())) {
 				return x; 
 			}
 		}

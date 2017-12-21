@@ -11,18 +11,26 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
-@Data
+@RequiredArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(of ={"id"})
+@Data
 @Entity
 public class Category implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	@NonNull
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	private Integer id;
+	
+	@NonNull
 	private String name;
 	
 	@ManyToMany(mappedBy="categories")
