@@ -1,6 +1,7 @@
 package com.richard.sales.domain;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +16,10 @@ import javax.persistence.ManyToMany;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of ={"id"})
 @Data
@@ -24,9 +28,16 @@ public class Product implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	@NonNull
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	private Integer id;
+	
+	@NonNull
+	private String name;
+	
+	@NonNull
+	private BigDecimal price;
 	
 	@ManyToMany
     @JoinTable(name = "PRODUCT_CATEGORY",

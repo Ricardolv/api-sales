@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @EqualsAndHashCode(of ={"id"})
 @Data
-@Entity
+@Entity(name = "category")
 public class Category implements Serializable {
 
 	private static final long serialVersionUID = 1L;
