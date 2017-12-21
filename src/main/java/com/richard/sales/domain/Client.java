@@ -1,7 +1,11 @@
 package com.richard.sales.domain;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CollectionTable;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,9 +31,11 @@ public class Client implements Serializable {
 	
 	@NonNull
 	private String name;
-	
 	private Integer type;
 	
+	@ElementCollection
+	@CollectionTable(name ="TELEPHONE")
+	private Set<String> telephones = new HashSet<>();
 	
 	
 	public ClientType getTtype() {

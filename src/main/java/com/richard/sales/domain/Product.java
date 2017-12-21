@@ -28,14 +28,11 @@ public class Product implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY) 
 	private Integer id;
 	
-	
-	
-	
-	 @ManyToMany
-     @JoinTable(name = "PRODUCT_CATEGORY",
+	@ManyToMany
+    @JoinTable(name = "PRODUCT_CATEGORY",
       joinColumns = @JoinColumn(name = "product_id"),
       inverseJoinColumns = @JoinColumn(name = "category_id")
-     )
-	 private List<Category> categories = new ArrayList<>();
+    )
+	private List<Category> categories = new ArrayList<>();
 
 }
