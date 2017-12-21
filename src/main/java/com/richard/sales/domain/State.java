@@ -13,21 +13,21 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@EqualsAndHashCode(of ={"id"})
-@Data
-@Entity
+//@NoArgsConstructor
+//@EqualsAndHashCode(of ={"id"})
+//@Data
+//@Entity
 public class State implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	@Id 
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
-	private Integer id;
-	
-	private String name;
-	
-	@OneToMany(mappedBy="state") 
-	private List<City> citys;
+//	@Id 
+//	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+//	private Integer id;
+//	
+//	private String name;
+//	
+//	@OneToMany(mappedBy="state") 
+//	private List<City> citys;
 
 }

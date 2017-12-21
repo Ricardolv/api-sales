@@ -17,7 +17,7 @@ public class ProductResource {
 	@Autowired
 	private ProductService productService;
 	
-	@GetMapping("/id")
+	@GetMapping("/{id}")
 	public ResponseEntity<Product> searchProductById(@PathVariable Integer id) {
 		Product product = this.productService.searchProductById(id);
         return product != null ? ResponseEntity.ok(product) : ResponseEntity.notFound().build();

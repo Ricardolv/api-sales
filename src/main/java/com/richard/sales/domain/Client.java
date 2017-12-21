@@ -16,34 +16,34 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-@NoArgsConstructor
-@EqualsAndHashCode(of ={"id"})
-@Data
-@Entity
+//@NoArgsConstructor
+//@EqualsAndHashCode(of ={"id"})
+//@Data
+//@Entity
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	@NonNull
-	@Id 
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
-	private Integer id;
-	
-	@NonNull
-	private String name;
-	private Integer type;
-	
-	@ElementCollection
-	@CollectionTable(name ="TELEPHONE")
-	private Set<String> telephones = new HashSet<>();
-	
-	
-	public ClientType getTtype() {
-		return ClientType.toEnum(type);
-	}
-
-	public void setTtype(ClientType type) {
-		this.type = type.getCode();
-	}
+//	@NonNull
+//	@Id 
+//	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+//	private Integer id;
+//	
+//	@NonNull
+//	private String name;
+//	private Integer type;
+//	
+//	@ElementCollection
+//	@CollectionTable(name ="TELEPHONE")
+//	private Set<String> telephones = new HashSet<>();
+//	
+//	
+//	public ClientType getTtype() {
+//		return ClientType.toEnum(type);
+//	}
+//
+//	public void setTtype(ClientType type) {
+//		this.type = type.getCode();
+//	}
 
 }

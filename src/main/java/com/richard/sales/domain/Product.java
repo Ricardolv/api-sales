@@ -13,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -39,8 +41,9 @@ public class Product implements Serializable {
 	@NonNull
 	private BigDecimal price;
 	
+	@JsonBackReference
 	@ManyToMany
-    @JoinTable(name = "PRODUCT_CATEGORY",
+    @JoinTable(name = "product_category",
       joinColumns = @JoinColumn(name = "product_id"),
       inverseJoinColumns = @JoinColumn(name = "category_id")
     )

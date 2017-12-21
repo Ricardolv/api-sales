@@ -17,7 +17,7 @@ public class CategoryResource {
 	@Autowired
 	private CategoryService categoryService;
 	
-	@GetMapping("/id")
+	@GetMapping("/{id}")
 	public ResponseEntity<Category> searchCategoryById(@PathVariable Integer id) {
 		Category category = this.categoryService.searchCategoryById(id);
         return category != null ? ResponseEntity.ok(category) : ResponseEntity.notFound().build();

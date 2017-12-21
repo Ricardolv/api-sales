@@ -17,12 +17,12 @@ public class Order implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@Id 
-	@GeneratedValue(strategy=GenerationType.IDENTITY) 
-	private Integer id;
-	
-	@Temporal(TemporalType.TIMESTAMP) 
-	private Date instante;
+//	@Id 
+//	@GeneratedValue(strategy=GenerationType.IDENTITY) 
+//	private Integer id;
+//	
+//	@Temporal(TemporalType.TIMESTAMP) 
+//	private Date instante;
 	
 //	@OneToOne(cascade = CascadeType.ALL, mappedBy="pedido") 
 //	private Pagamento pagamento;
